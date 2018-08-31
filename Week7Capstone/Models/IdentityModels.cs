@@ -29,5 +29,11 @@ namespace Week7Capstone.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Week7Capstone.DAL.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<Week7Capstone.DAL.Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<Week7Capstone.DAL.Supplier> Suppliers { get; set; }
     }
 }
