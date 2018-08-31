@@ -10,6 +10,7 @@ namespace Week7Capstone.DAL
         public Db_Model()
             : base("name=NorthwindDbContext")
         {
+            Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Category> Categories { get; set; }
