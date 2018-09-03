@@ -10,6 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Week7Capstone.DAL;
 using Week7Capstone.Models;
+using Week7Capstone.ViewModels;
 
 namespace Week7Capstone.Controllers
 {
@@ -18,9 +19,9 @@ namespace Week7Capstone.Controllers
         private Db_Model db = new Db_Model();
 
         // GET: api/Products
-        public IQueryable<Product> GetProducts()
+        public IQueryable<ProductVM> GetProducts()
         {
-            return db.Products;
+            return db.Products.Select(p => new ProductVM() { ProductName = p.ProductName, ProductId = p.ProductID});
         }
 
         // GET: api/Products/5

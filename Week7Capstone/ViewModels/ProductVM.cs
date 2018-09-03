@@ -8,7 +8,7 @@ namespace Week7Capstone.ViewModels
 {
     public class ProductVM
     {
-        public Product productName { get; set; }
-        public Product productId { get; set; }
+        public string ProductName { get; set; }
+        public int ProductId { get; set; }
     }
 }
